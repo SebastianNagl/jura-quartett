@@ -1,0 +1,17 @@
+#footer-list {
+  padding: 25px 0px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+#footer-list li:not(:last-child) {
+  font-size: 12px;
+  padding: 0px 10px;
+  font-weight: 600;
+}
+#copyright {
+  color: rgba(195, 195, 195, 1);
+  font-size: 12px;
+  padding: 0px 10px;
+  font-weight: 600;
+}
