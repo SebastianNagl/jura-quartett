@@ -1,0 +1,15 @@
+
+<form id="form" action="/auth/login" method="POST">
+
+  <label for="username">E-mail</label><br />
+  <input type="email" name="username" required />
+
+  <label for="password">Password</label><br />
+  <input type="password" name="password" required/>
+
+  {{#if errorMessage}}
+    <div class="error-message">{{errorMessage}}</div>
+  {{/if}}
+
+  <button type="submit">Log in</button>
+</form>
