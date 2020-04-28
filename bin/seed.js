@@ -5,7 +5,7 @@ const cards = require("../content.json");
 const dbTitle = "jura-quartett";
 
 mongoose
-  .connect(process.env.DATABASE_URL || `mongodb://localhost/${dbTitle}`, {
+  .connect(process.env.MONGODB_URI || `mongodb://localhost/${dbTitle}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
