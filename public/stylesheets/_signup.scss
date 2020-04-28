@@ -1,0 +1,68 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+
+  .signup-box {
+    border-radius: 4px;
+    padding: 14px 18px;
+    border: 1px #ddd solid;
+    width: 312px;
+  }
+
+  .logo-signup {
+    width: 100px;
+    padding: 20px;
+  }
+
+  label,
+  legend {
+    display: block;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+  }
+
+  input[type='text'],
+  input[type='number'],
+  input[type='email'],
+  input[type='password'] {
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    width: 308px;
+    height: 23px;
+  }
+
+  button {
+    border-radius: 4px;
+    padding: 14px 18px;
+    border: 1px #ddd solid;
+    width: 308px;
+    height: 23px;
+    font-size: 13px;
+    line-height: 29px;
+    margin: 0;
+    padding: 0 14px 0 18px;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  span {
+    padding: 10px;
+    font-size: 0.8rem;
+    color: #a6a6a6;
+  }
+}
