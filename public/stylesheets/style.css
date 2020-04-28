@@ -1,3 +1,4 @@
+
 .flex {
   display: flex;
   justify-content: center;
@@ -6,6 +7,7 @@
   flex-direction: column; }
   .flex a {
     padding: 10px; }
+
 
 .signup-container {
   display: flex;
@@ -19,6 +21,9 @@
     padding: 14px 18px;
     border: 1px #ddd solid;
     width: 312px; }
+  .signup-container .logo-signup {
+    width: 100px;
+    padding: 20px; }
   .signup-container label,
   .signup-container legend {
     display: block;
@@ -37,6 +42,14 @@
     border-radius: 3px;
     width: 274px;
     height: 30px; }
+  .signup-container input[type='text'],
+  .signup-container input[type='number'],
+  .signup-container input[type='email'],
+  .signup-container input[type='password'] {
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    width: 308px;
+    height: 23px; }
   .signup-container button {
     border-radius: 4px;
     padding: 14px 18px;
