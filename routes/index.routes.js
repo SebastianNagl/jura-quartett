@@ -21,7 +21,7 @@ router.get("/routes/terms", (req, res, next) => {
   res.render("terms");
 });
 
-//rendering  Urteilen page
+//rendering cards Urteilen page
 router.get("/routes/urteilen", (req, res, next) => {
   Cards.find().then((cards) => {
     res.render("urteilen", { cards: cards });
