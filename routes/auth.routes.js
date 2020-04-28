@@ -1,9 +1,9 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const User = require('../models/User.model');
-const bcrypt = require('bcrypt');
-const passport = require('passport');
-const ensureLogin = require('connect-ensure-login');
+const User = require("../models/User.model");
+const bcrypt = require("bcrypt");
+const passport = require("passport");
+const ensureLogin = require("connect-ensure-login");
 
 // Roles, we nee to pass the middleware 'checkAdmin' to render an admin page if we will.
 // const checkGuest = checkRoles('GUEST');
@@ -20,32 +20,32 @@ const ensureLogin = require('connect-ensure-login');
 // }
 
 // Signup
-router.get('/signup', (req, res) => {
-  res.render('auth/signup');
+router.get("/signup", (req, res) => {
+  res.render("auth/signup");
 });
 
 //This route needs to receive the data from the form and log the user in.
-router.post('/signup', (req, res, next) => {
+router.post("/signup", (req, res, next) => {
   const { username, password, name, age } = req.body;
   if (age < 18) {
-    res.render('auth/signup', {
-      message: 'Sorry, you must be 18 or older to register this site.',
+    res.render("auth/signup", {
+      message: "Sorry, you must be 18 or older to register this site.",
     });
     return;
   }
   if (password.length < 6) {
-    res.render('auth/signup', {
-      message: 'Your password must be 6 characters minimun.',
+    res.render("auth/signup", {
+      message: "Your password must be 6 characters minimun.",
     });
     return;
   }
-  if (username === '') {
-    res.render('auth/signup', { message: 'Your e-mail cannot be empty' });
+  if (username === "") {
+    res.render("auth/signup", { message: "Your e-mail cannot be empty" });
     return;
   }
   User.findOne({ username: username }).then((user) => {
     if (user != null) {
-      res.render('auth/signup', { message: 'Your e-mail alredy exists' });
+      res.render("auth/signup", { message: "Your e-mail alredy exists" });
       return;
     }
     const salt = bcrypt.genSaltSync();
@@ -57,7 +57,7 @@ router.post('/signup', (req, res, next) => {
           if (err) {
             next(err);
           } else {
-            res.redirect('/');
+            res.redirect("/");
           }
         });
       })
@@ -67,38 +67,38 @@ router.post('/signup', (req, res, next) => {
   });
 });
 
-router.get('/login', (req, res, next) => {
-  res.render('auth/login', { errorMessage: req.flash('error') });
+router.get("/login", (req, res, next) => {
+  res.render("auth/login", { errorMessage: req.flash("error") });
 });
 
 router.post(
-  '/login',
-  passport.authenticate('local', {
-    successRedirect: '/auth/private-page',
-    failureRedirect: '/auth/login',
+  "/login",
+  passport.authenticate("local", {
+    successRedirect: "/auth/private-page",
+    failureRedirect: "/auth/login",
     failureFlash: true,
     passReqToCallback: true,
   })
 );
 
-router.get('/private-page', ensureLogin.ensureLoggedIn(), (req, res) => {
-  res.render('auth/private', { user: req.user });
+router.get("/private-page", ensureLogin.ensureLoggedIn(), (req, res) => {
+  res.render("auth/private", { user: req.user });
 });
 
 router.get(
-  '/google',
-  passport.authenticate('google', {
+  "/google",
+  passport.authenticate("google", {
     scope: [
-      'https://www.googleapis.com/auth/userinfo.profile',
-      'https://www.googleapis.com/auth/userinfo.email',
+      "https://www.googleapis.com/auth/userinfo.profile",
+      "https://www.googleapis.com/auth/userinfo.email",
     ],
   })
 );
 router.get(
-  '/google/callback',
-  passport.authenticate('google', {
-    successRedirect: '/auth/private-page',
-    failureRedirect: '/auth/login',
+  "/google/callback",
+  passport.authenticate("google", {
+    successRedirect: "/auth/private-page",
+    failureRedirect: "/auth/login",
   })
 );
 
