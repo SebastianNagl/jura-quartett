@@ -1,26 +1,19 @@
 <div class="signup-container">
-  <a href="/">
-    <img
-      src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo4.png"
-      alt="logo"
-      class="logo-signup"
-  /></a>
-
   <div class="signup-box">
     <h2>
-      Create account
+      Konto erstellen
     </h2>
     <form id="form" action="/auth/signup" method="POST">
-      <label for="name">Your name</label>
-      <input type="text" name="name" required /><br />
+      <label for="name">Ihr Name</label>
+      <input type="text" name="name" required />
 
-      <label for="age">Age</label>
-      <input type="number" name="age" required /><br />
+      <label for="age">Ihr Alter</label>
+      <input type="number" name="age" required />
 
-      <label for="username">E-mail</label>
-      <input type="email" name="username" required /><br />
+      <label for="username">E-Mail</label>
+      <input type="email" name="username" required />
 
-      <label for="password">Password</label>
+      <label for="password">Passwort</label>
       <input
         type="password"
         name="password"
@@ -32,10 +25,10 @@
       <div class="error-message">{{ message }}</div>
       {{/if}}
 
-      <button type="submit">Create your account</button>
+      <button type="submit">Erstellen Sie Ihr Konto</button>
     </form>
 
-    <a href="/auth/google"
+    <a class="" href="/auth/google"
       ><span
         ><svg
           height="20"
@@ -63,28 +56,12 @@
             <path d="M20 20h472v472H20V20z"></path>
           </g></svg
       ></span>
-      Continue with Google</a
+      Weiter mit Google</a
+    >
+
+    <hr />
+    <span class="flex"
+      >Sie haben bereits ein Konto? <a href="/auth/login">Anmelden</a></span
     >
   </div>
-
-  <span>
-    © 2020 Jura Quartett
-  </span>
 </div>
-
-<!-- 
-<form id="form" action="/auth/signup" method="POST">
-  <label for="username">username</label><br />
-  <input type="text" name="username" />
-
-  <label for="password">Password</label><br />
-  <input type="password" name="password" />
-
-  {{#if message}}
-  <div class="error-message">{{ message }}</div>
-  {{/if}}
-
-  <button type="submit">Sign up</button>
-</form>
-
-<a href="/">Home</a> -->

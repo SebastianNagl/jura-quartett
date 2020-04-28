@@ -6,15 +6,15 @@ const passport = require("passport");
 const ensureLogin = require("connect-ensure-login");
 
 // Roles, we nee to pass the middleware 'checkAdmin' to render an admin page if we will.
-// const checkGuest = checkRoles('GUEST');
-// const checkAdmin = checkRoles('ADMIN');
+// const checkGuest = checkRoles("GUEST");
+// const checkAdmin = checkRoles("ADMIN");
 
 // function checkRoles(role) {
 //   return function (req, res, next) {
 //     if (req.isAuthenticated() && req.user.role === role) {
 //       return next();
 //     } else {
-//       res.redirect('/login');
+//       res.redirect("/login");
 //     }
 //   };
 // }
@@ -29,23 +29,26 @@ router.post("/signup", (req, res, next) => {
   const { username, password, name, age } = req.body;
   if (age < 18) {
     res.render("auth/signup", {
-      message: "Sorry, you must be 18 or older to register this site.",
+      message:
+        "Sorry, Sie müssen mindestens 18 Jahre alt sein, um diese Website zu registrieren.",
     });
     return;
   }
   if (password.length < 6) {
     res.render("auth/signup", {
-      message: "Your password must be 6 characters minimun.",
+      message: "Passwörter müssen mindestens 6 Zeichen lang sein.",
     });
     return;
   }
   if (username === "") {
-    res.render("auth/signup", { message: "Your e-mail cannot be empty" });
+    res.render("auth/signup", {
+      message: "Ihre E-Mail Adresse kann nicht leer sein.",
+    });
     return;
   }
   User.findOne({ username: username }).then((user) => {
     if (user != null) {
-      res.render("auth/signup", { message: "Your e-mail alredy exists" });
+      res.render("auth/signup", { message: "Ihre E-Mail existiert bereits." });
       return;
     }
     const salt = bcrypt.genSaltSync();
@@ -101,5 +104,10 @@ router.get(
     failureRedirect: "/auth/login",
   })
 );
+
+router.get("/logout", (req, res, next) => {
+  res.logout();
+  res.redirect("/");
+});
 
 module.exports = router;
