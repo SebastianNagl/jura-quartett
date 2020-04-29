@@ -11,6 +11,8 @@ const cardSchema = new Schema({
   "§§ Kette": String,
   Zitat: String,
   Sachverhalt: String,
+  Kategorie: Number,
+  Buchstabe: String,
 });
 
 const Card = mongoose.model("Card", cardSchema);
