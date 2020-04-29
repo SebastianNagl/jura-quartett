@@ -19,8 +19,18 @@ const ensureLogin = require("connect-ensure-login");
 //   };
 // }
 
+function isLoggedIn() {
+  return function (req, res, next) {
+    if (!req.isAuthenticated()) {
+      return next();
+    } else {
+      res.redirect("/");
+    }
+  };
+}
+
 // Signup
-router.get("/signup", (req, res) => {
+router.get("/signup", isLoggedIn(), (req, res) => {
   res.render("auth/signup");
 });
 
@@ -70,7 +80,7 @@ router.post("/signup", (req, res, next) => {
   });
 });
 
-router.get("/login", (req, res, next) => {
+router.get("/login", isLoggedIn(), (req, res, next) => {
   res.render("auth/login", { errorMessage: req.flash("error") });
 });
 
@@ -85,7 +95,7 @@ router.post(
 );
 
 router.get("/private-page", ensureLogin.ensureLoggedIn(), (req, res) => {
-  res.render("auth/private", { user: req.user });
+  res.render("auth/private", { user: req.user, loggedIn: req.user });
 });
 
 router.get(
@@ -106,7 +116,7 @@ router.get(
 );
 
 router.get("/logout", (req, res, next) => {
-  res.logout();
+  req.logout();
   res.redirect("/");
 });
 
