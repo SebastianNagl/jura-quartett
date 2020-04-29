@@ -29,4 +29,14 @@ router.get("/urteilen", (req, res, next) => {
   });
 });
 
+//seeding route
+router.get("/seed/:password", (req, res) => {
+  if (req.params.password === process.env.SEED_PW) {
+    Card.collection.drop();
+    Card.insertMany(cards)
+      .then(() => console.log("created cards, will now close connection"))
+      .catch((err) => console.log(err));
+  }
+});
+
 module.exports = router;
