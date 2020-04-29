@@ -5,7 +5,7 @@ const cards = require("../content.json");
 
 // rendering Home Page
 router.get("/", (req, res) => {
-  console.log(req.user);
+  // console.log(req.user);
   res.render("index", { loggedIn: req.user });
 });
 
