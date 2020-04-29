@@ -1,0 +1,94 @@
+nav {
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  span {
+    padding: 30px;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  a {
+    color: $cream;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 5px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 30px;
+  }
+
+  li {
+    margin: 0 20px;
+    list-style-type: none;
+  }
+
+  .active {
+    border-bottom: 3px solid $cream;
+  }
+  a:hover {
+    color: $light-red;
+    border-bottom: 3px solid $light-red;
+  }
+
+  .btn {
+    background-color: $cream;
+    color: $red;
+    padding: 3px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn:hover {
+    background-color: $light-red;
+    color: $red;
+    border-bottom: none;
+    box-shadow: none;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $cream;
+    color: $red;
+    border-radius: 6px;
+    min-width: 160px;
+    box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    margin: 10px;
+
+    a {
+      color: $black;
+      background-color: $cream;
+      border-bottom: none;
+    }
+
+    a:hover {
+      color: $red;
+    }
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .konto a:hover {
+    border-bottom: none;
+    padding-bottom: 20px;
+  }
+}

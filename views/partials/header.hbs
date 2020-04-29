@@ -1,4 +1,37 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav>
+  <div>
+    <span
+      >Das Jura<br />
+      Quartett</span
+    >
+
+    <ul>
+      <li><a class="active" href="/">Home</a></li>
+      <li><a href="/urteilen">Die Fälle</a></li>
+      <li><a href="/regeln">Regeln</a></li>
+      <li><a href="/team">Team</a></li>
+      <li><a class="btn" href="/kaufen">Kaufen</a></li>
+      <div class="dropdown">
+      <li class="konto">
+        <a href="/auth/login"
+          ><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Konto</a
+        >
+      </li>
+        <div class="dropdown-content">
+          {{#unless loggedIn }}
+            <a href="/auth/login">Einlogen</a> <br> <br>
+            <a href="/auth/signup">Registrieren</a>
+            {{/unless}}
+            {{#if loggedIn}}
+            <a href="/auth/logout">Abmeldung</a>
+            {{/if}}
+        </div>
+      
+    </ul>
+  </div>
+</nav>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -20,9 +53,9 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
         Search
       </button>
-    </form>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    </form> -->
+<!-- Collect the nav links, forms, and other content for toggling -->
+<!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li>
           <a class="nav-link" href="#"
@@ -64,5 +97,5 @@
       </ul>
     </div>
     <!-- /.navbar-collapse -->
-  </div>
-</nav>
+<!-- </div>
+</nav> -->
