@@ -1,32 +1,28 @@
 <nav>
   <div>
-    <span
-      >Das Jura<br />
-      Quartett</span
-    >
+    <span>Das Jura<br />
+      Quartett</span>
 
     <ul>
       <li><a class="active" href="/">Home</a></li>
-      <li><a href="/urteilen">Die Fälle</a></li>
+      <li><a href="/faelle">Die Fälle</a></li>
       <li><a href="/regeln">Regeln</a></li>
       <li><a href="/team">Team</a></li>
       <li><a class="btn" href="/kaufen">Kaufen</a></li>
       <div class="dropdown">
-      <li class="konto">
-        <a href="/auth/login"
-          ><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Konto</a
-        >
-      </li>
+        <li class="konto">
+          <a href="/auth/login"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Konto</a>
+        </li>
         <div class="dropdown-content">
           {{#unless loggedIn }}
-            <a href="/auth/login">Einlogen</a> <br> <br>
-            <a href="/auth/signup">Registrieren</a>
-            {{/unless}}
-            {{#if loggedIn}}
-            <a href="/auth/logout">Abmeldung</a>
-            {{/if}}
+          <a href="/auth/login">Einlogen</a> <br> <br>
+          <a href="/auth/signup">Registrieren</a>
+          {{/unless}}
+          {{#if loggedIn}}
+          <a href="/auth/logout">Abmeldung</a>
+          {{/if}}
         </div>
-      
+
     </ul>
   </div>
 </nav>
@@ -92,4 +88,3 @@
     <!-- /.navbar-collapse -->
 <!-- </div>
 </nav> -->
-
