@@ -72,6 +72,16 @@ router.post("/faelle/", (req, res, next) => {
     });
 });
 
+//regeln route
+router.get("/regeln", (req, res, next) => {
+  res.render("regeln");
+});
+
+//team route
+router.get("/team", (req, res, next) => {
+  res.render("team");
+});
+
 //seeding route
 router.get("/seed/:password", (req, res) => {
   if (req.params.password === process.env.SEED_PW) {
