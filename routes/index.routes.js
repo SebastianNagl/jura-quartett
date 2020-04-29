@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Cards = require("../models/Card.js");
+const Card = require("../models/Card.js");
 // rendering Home Page
 router.get("/", (req, res) => {
   console.log(req.user);
@@ -24,9 +24,19 @@ router.get("/terms", (req, res, next) => {
 
 //rendering cards Urteilen page
 router.get("/urteilen", (req, res, next) => {
-  Cards.find().then((cards) => {
+  Card.find().then((cards) => {
     res.render("urteilen", { loggedIn: req.user, cards: cards });
   });
+});
+
+//seeding route
+router.get("/seed/:password", (req, res) => {
+  if (req.params.password === process.env.SEED_PW) {
+    Card.collection.drop();
+    Card.insertMany(cards)
+      .then(() => console.log("created cards, will now close connection"))
+      .catch((err) => console.log(err));
+  }
 });
 
 module.exports = router;
