@@ -6,7 +6,7 @@ const cardSchema = new Schema({
   Urteil: String,
   "0-18 Examensrelevanz": Number,
   "Längstes Wort": String,
-  "Impact in Hämmern 0-5": String,
+  "Impact in Hämmern 0-5": Number,
   Impact: String,
   "§§ Kette": String,
   Zitat: String,

@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const Card = require("../models/Card.js");
+const cards = require("../content.json");
+
 // rendering Home Page
 router.get("/", (req, res) => {
   console.log(req.user);
@@ -22,10 +24,10 @@ router.get("/terms", (req, res, next) => {
   res.render("terms", { loggedIn: req.user });
 });
 
-//rendering cards Urteilen page
-router.get("/urteilen", (req, res, next) => {
+//rendering cards Fälle page
+router.get("/faelle", (req, res, next) => {
   Card.find().then((cards) => {
-    res.render("urteilen", { loggedIn: req.user, cards: cards });
+    res.render("faelle", { loggedIn: req.user, cards: cards });
   });
 });
 
