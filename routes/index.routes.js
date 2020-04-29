@@ -37,7 +37,8 @@ router.get("/seed/:password", (req, res) => {
     Card.collection.drop();
     Card.insertMany(cards)
       .then(() => console.log("created cards, will now close connection"))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() => res.redirect("/"));
   }
 });
 
