@@ -1,4 +1,11 @@
-<h1>Die Urteile:</h1>
-{{#each cards}}
-<p><a href="/index.routes.js/{{_id}}">{{Urteil}}</a></p>
-{{/each}}
+<form action="/faelle" method="post">
+  <label for="cards">Wähle ein Urteil:</label>
+  <select id="cards" name="cardId">
+    {{#each cards}}
+    <option value="{{_id}}">{{Urteil}}</option>
+    {{/each}}
+  </select>
+  <button type="submit">Suchen</button>
+</form>
+
+{{!-- todo add single page logic --}}
