@@ -6,11 +6,13 @@ const cardSchema = new Schema({
   Urteil: String,
   "0-18 Examensrelevanz": Number,
   "Längstes Wort": String,
-  "Impact in Hämmern 0-5": String,
+  "Impact in Hämmern 0-5": Number,
   Impact: String,
   "§§ Kette": String,
   Zitat: String,
   Sachverhalt: String,
+  Kategorie: Number,
+  Buchstabe: String,
 });
 
 const Card = mongoose.model("Card", cardSchema);
