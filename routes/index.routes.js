@@ -22,6 +22,11 @@ router.get("/terms", (req, res, next) => {
   res.render("terms", { loggedIn: req.user });
 });
 
+// rendering shopping cart
+router.get("/kaufen", (req, res, next) => {
+  res.render("kaufen");
+});
+
 //rendering cards Urteilen page
 router.get("/urteilen", (req, res, next) => {
   Cards.find().then((cards) => {

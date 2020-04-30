@@ -13,6 +13,12 @@ input:focus {
   outline: none;
 }
 
+textarea,
+select,
+input {
+  background-color: $cream;
+}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -22,6 +28,8 @@ input:focus {
 
   a {
     padding: 10px;
+    color: $black;
+    font-size: 1rem;
   }
 }
 
@@ -38,6 +46,7 @@ input:focus {
     padding: 14px 18px;
     border: 1px $cream solid;
     width: 312px;
+    background-color: $cream;
   }
 
   label,
@@ -57,7 +66,7 @@ input:focus {
   input[type="number"],
   input[type="email"],
   input[type="password"] {
-    border: 1px solid $cream;
+    border: 2px solid $red;
     border-radius: 6px;
     width: 310px;
     height: 35px;
@@ -86,6 +95,26 @@ input:focus {
   }
   hr {
     width: 310px;
+    margin: 20px 0;
+    border: 1px solid $red;
+  }
+
+  .google {
+    background-color: $cream;
+    color: $black;
+    padding: 1px 18px;
+    // width: 310px;
+    border-radius: 6px;
+    font-weight: 700;
+    box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      background: none;
+      background-color: $cream;
+    }
   }
 
   button {
@@ -102,8 +131,8 @@ input:focus {
     cursor: pointer;
     font-weight: 700;
     box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
-    background-color: $cream;
-    color: $red;
+    background-color: $red;
+    color: $cream;
     border: none;
     font-size: 1.1rem;
   }
@@ -118,10 +147,11 @@ input:focus {
   span {
     padding: 5px;
     font-size: 0.8rem;
-    color: $cream;
+    color: $black;
   }
 
   .error-message {
-    color: #e42828;
+    color: $red;
+    padding: 10px;
   }
 }
