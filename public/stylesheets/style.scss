@@ -4,6 +4,7 @@
 @import "_cards";
 @import "_kaufen";
 @import "_body.scss";
+@import "_team.scss";
 
 * {
   margin: 0;
@@ -22,8 +23,11 @@ a {
 }
 
 footer {
+  margin-top: 20vh;
   position: fixed;
   bottom: 0;
+  background-color: $cream;
+  width: 100%;
 
   li {
     margin: 2vh;

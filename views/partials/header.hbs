@@ -3,11 +3,11 @@
     <span>Das Jura<br />
       Quartett</span>
 
-    <ul>
-      <li><a class="active" href="/">Home</a></li>
-      <li><a href="/faelle">Die Fälle</a></li>
-      <li><a href="/regeln">Regeln</a></li>
-      <li><a href="/team">Team</a></li>
+    <ul >
+      <li><a {{#if home}}class="active"{{/if}} href="/">Home</a></li>
+      <li><a {{#if faelle}}class="active"{{/if}} href="/faelle">Die Fälle</a></li>
+      <li><a {{#if regeln}}class="active"{{/if}} href="/regeln">Regeln</a></li>
+      <li><a {{#if team}}class="active"{{/if}} href="/team">Team</a></li>
       <li><a class="btn" href="/kaufen">Kaufen</a></li>
       <div class="dropdown">
         <li class="konto">
@@ -17,8 +17,10 @@
           {{#unless loggedIn }}
           <a href="/auth/login">Einlogen</a> <br> <br>
           <a href="/auth/signup">Registrieren</a>
+          {{name}}
           {{/unless}}
           {{#if loggedIn}}
+          
           <a href="/auth/logout">Abmeldung</a>
           {{/if}}
         </div>
