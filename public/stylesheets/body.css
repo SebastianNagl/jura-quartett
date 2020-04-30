@@ -1,0 +1,267 @@
+container {
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container1 {
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  border-left: solid 2px white;
+  border-radius: 5% 0 0 5%;
+  padding: 5px;
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container2 {
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  border-right: solid 2px white;
+  border-radius: 0 5% 5% 0;
+  padding: 5px;
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.child1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.child2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.child3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.child5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 100px;
+  position: static;
+}
+
+.btn {
+  width: 100px;
+  height: 20px;
+  margin-top: 20px;
+}
+
+.img {
+  width: 300;
+  height: 300px;
+}
+
+.img1 {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container6 {
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  border-left: solid 2px white;
+  border-radius: 5% 0 0 5%;
+  padding: 5px;
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.section4 div {
+  border-radius: 20%;
+  width: 160px;
+  height: 160px;
+  padding: 10px;
+  border: 2px solid white;
+}
+
+.section4 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.logo {
+  width: 100px;
+  height: 20px;
+  margin-top: 20px;
+}
+
+.footlogo {
+  width: 20px;
+}
+
+footer {
+  background-color: white;
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.section1 {
+  padding-bottom: 50px;
+}
+
+.section2 {
+  padding-bottom: 50px;
+}
+
+.box1 {
+  border-radius: 10%;
+  width: 130px;
+  height: 75px;
+  padding: 10px;
+  border: 2px solid white;
+  position: relative;
+  left: 100px;
+  top: 80px;
+}
+
+.box2 {
+  border-radius: 10%;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 2px solid white;
+  position: relative;
+  bottom: 110px;
+  left: 250px;
+}
+
+.box3 {
+  border-radius: 10%;
+  width: 200px;
+  height: 285px;
+  padding: 10px;
+  border: 2px solid white;
+  position: relative;
+  right: 175px;
+  top: 35px;
+}
+
+.box4 {
+  border-radius: 10%;
+  width: 100px;
+  height: 220px;
+  padding: 10px;
+  border: 2px solid white;
+  position: relative;
+  left: 75px;
+  top: 55px;
+}
+
+.image1 {
+  width: 100px;
+  position: relative;
+  left: 150px;
+}
+
+.img2 {
+  width: 150px;
+}
+
+.image2 {
+  position: relative;
+  left: 100px;
+  bottom: 150px;
+}
+
+.img3 {
+  width: 150px;
+}
+
+.image3 {
+  position: relative;
+  bottom: 500px;
+}
+
+.image4 {
+  border-radius: 10%;
+  width: 100px;
+  height: 220px;
+  padding: 10px;
+  border: 2px solid white;
+  position: relative;
+  left: 160px;
+  bottom: 685px;
+}
+
+.image5 {
+  border-radius: 10%;
+  width: 130px;
+  height: 220px;
+  padding: 10px;
+  border: 2px solid white;
+  position: relative;
+  bottom: 1060px;
+  left: 100px;
+}
+
+.image6 {
+  border-radius: 10%;
+  width: 150px;
+  height: 220px;
+  padding: 10px;
+  border: 2px solid white;
+  position: relative;
+  bottom: 1200px;
+  right: 50px;
+}
+
+.boxes {
+  height: 400px;
+  position: relative;
+}
+/*# sourceMappingURL=body.css.map */
