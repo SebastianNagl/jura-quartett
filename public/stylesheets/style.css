@@ -29,7 +29,7 @@ input {
   flex-wrap: nowrap;
   flex-direction: column; }
   .signup-container .signup-box {
-    margin: 20px;
+    margin: 35px;
     border-radius: 8px;
     padding: 14px 18px;
     border: 1px #faf8e6 solid;
@@ -270,7 +270,7 @@ nav .konto a:hover {
   justify-items: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 30px; }
+  padding-top: 25px; }
   .container-table table {
     background-color: #faf8e6;
     padding: 20px;
@@ -317,11 +317,15 @@ nav .konto a:hover {
     font-weight: 700;
     box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
     text-decoration: none; }
+  .container-table a:hover {
+    box-shadow: none; }
   .container-table tr:nth-child(1) {
-    border-bottom: 1px solid #f04949; }
+    border-bottom: 2px solid #f04949; }
   .container-table tr:nth-child(2) > td:nth-child(3) {
     font-size: 1.5rem;
     text-align: right; }
+  .container-table td:nth-child(2) {
+    padding: 15px 10px 25px 0; }
 
 .landing {
   margin-top: 8vh;

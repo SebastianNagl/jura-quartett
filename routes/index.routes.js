@@ -6,7 +6,7 @@ const cards = require("../content.json");
 // rendering Home Page
 router.get("/", (req, res) => {
   // console.log(req.user);
-  res.render("index", { loggedIn: req.user });
+  res.render("index", { loggedIn: req.user, home: true });
 });
 
 // rendering about page
@@ -33,7 +33,7 @@ router.get("/kaufen", (req, res, next) => {
 router.get("/faelle", (req, res, next) => {
   Card.find()
     .then((cards) => {
-      res.render("faelle", { loggedIn: req.user, cards: cards });
+      res.render("faelle", { loggedIn: req.user, cards: cards, faelle: true });
     })
     .catch((err) => console.log("error loading fälle ", err));
 });
@@ -79,12 +79,12 @@ router.post("/faelle/", (req, res, next) => {
 
 //regeln route
 router.get("/regeln", (req, res, next) => {
-  res.render("regeln");
+  res.render("regeln", { regeln: true });
 });
 
 //team route
 router.get("/team", (req, res, next) => {
-  res.render("team");
+  res.render("team", { team: true });
 });
 
 //seeding route
