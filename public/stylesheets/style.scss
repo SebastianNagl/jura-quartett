@@ -5,6 +5,7 @@
 @import "_kaufen";
 @import "_body.scss";
 @import "_team.scss";
+@import "_regeln.scss";
 
 * {
   margin: 0;
@@ -23,7 +24,7 @@ a {
 }
 
 footer {
-  margin-top: 20vh;
+  margin-top: 10vh;
   position: fixed;
   bottom: 0;
   background-color: $cream;
