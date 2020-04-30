@@ -7,7 +7,6 @@
 
   table {
     background-color: $cream;
-
     padding: 20px;
     border-spacing: 0;
     border-collapse: collapse;
@@ -22,6 +21,7 @@
     width: 40px;
     height: 35px;
     font-size: 1rem;
+    padding-left: 10px;
   }
 
   input[type="number"]:hover {
@@ -55,15 +55,37 @@
     }
   }
 
+  td:nth-child(2) > label {
+    display: flex;
+    justify-content: center;
+  }
+
+  td:nth-child(3) {
+    text-align: center;
+  }
+
   a {
     background-color: $red;
     color: $cream;
-    padding: 3px 12px;
+    padding: 10px 16px;
     border-radius: 6px;
     font-weight: 700;
     box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
   }
 
   a:hover {
+  }
+
+  tr:nth-child(1) {
+    border-bottom: 1px solid $red;
+  }
+
+  tr:nth-child(2) > td:nth-child(3) {
+    font-size: 1.5rem;
+    text-align: right;
+  }
+
+  td:nth-child(2) {
   }
 }
