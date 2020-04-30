@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *:focus {
   outline: none; }
 
@@ -196,7 +197,7 @@ nav .konto a:hover {
   border-bottom: none;
   padding-bottom: 20px; }
 
-.case-selector, .card {
+.case-selector, .card, .team {
   background-color: #faf8e6;
   padding: 8vh;
   display: flex;
@@ -204,22 +205,22 @@ nav .konto a:hover {
   line-height: 2.5vh;
   margin: 5vh 20vh;
   border-radius: 6px; }
-  .case-selector form, .card form {
+  .case-selector form, .card form, .team form {
     font-size: 2.5vh;
     display: flex;
     flex-direction: column;
     background-color: inherit; }
-    .case-selector form label, .card form label {
+    .case-selector form label, .card form label, .team form label {
       background-color: inherit;
       font-size: inherit;
       text-align: center; }
-    .case-selector form select, .card form select {
+    .case-selector form select, .card form select, .team form select {
       border: 2px solid #f04949;
       padding: 2vh;
       background-color: inherit;
       font-size: inherit;
       text-align-last: center; }
-    .case-selector form button, .card form button {
+    .case-selector form button, .card form button, .team form button {
       border: 2px solid #f04949;
       margin-top: 2vh;
       background-color: inherit;
@@ -468,11 +469,11 @@ nav .konto a:hover {
     width: 100px;
     position: relative; }
   .landing .img1 {
-    width: 250px;
-    height: 400px;
+    width: 38vh;
+    height: 60vh;
     position: relative;
-    right: 250px;
-    top: 50px; }
+    right: 275px;
+    top: 15px; }
   .landing .imgDiv {
     display: flex;
     position: relative;
@@ -527,7 +528,10 @@ nav .konto a:hover {
   .landing .boxes {
     height: 100px; }
   .landing h1 {
-    font-size: 5em; }
+    font-size: 5em;
+    margin-left: 2vh;
+    line-height: 11vh;
+    margin-top: 3vh; }
   .landing p {
     color: white;
     font-size: 1.75em;
@@ -547,6 +551,40 @@ nav .konto a:hover {
   .landing .section3 {
     margin-top: 8vh; }
 
+.team {
+  display: flex;
+  flex-direction: column; }
+  .team .founder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5vh 0; }
+    .team .founder .dd {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%; }
+    .team .founder img {
+      border-radius: 50%;
+      width: 20%;
+      height: auto; }
+  .team hr {
+    overflow: visible;
+    /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #f04949;
+    color: #f04949;
+    text-align: center; }
+  .team hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: #faf8e6; }
+
 * {
   margin: 0;
   padding: 0;
@@ -561,8 +599,11 @@ a {
   font-family: "Merriweather", serif; }
 
 footer {
+  margin-top: 20vh;
   position: fixed;
-  bottom: 0; }
+  bottom: 0;
+  background-color: #faf8e6;
+  width: 100%; }
   footer li {
     margin: 2vh;
     text-transform: uppercase;
