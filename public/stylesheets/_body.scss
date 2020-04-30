@@ -188,11 +188,11 @@
   }
 
   .img1 {
-    width: 250px;
-    height: 400px;
+    width: 38vh;
+    height: 60vh;
     position: relative;
-    right: 250px;
-    top: 50px;
+    right: 275px;
+    top: 15px;
   }
   .imgDiv {
     display: flex;
@@ -263,6 +263,9 @@
 
   h1 {
     font-size: 5em;
+    margin-left: 2vh;
+    line-height: 11vh;
+    margin-top: 3vh;
   }
   p {
     color: white;
