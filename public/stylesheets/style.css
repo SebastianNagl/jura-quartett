@@ -216,7 +216,7 @@ nav .konto a:hover {
     margin-left: 10vh;
     margin-right: 10vh;
     text-align: justify;
-    padding: 5vh 0;
+    padding: 3vh 0;
     background-color: inherit;
     font-size: 2vh; }
   .card .header {
@@ -230,6 +230,7 @@ nav .konto a:hover {
     background-color: inherit;
     width: 15vh;
     height: 4vh;
+    margin-top: 4vh;
     margin-left: 10vh;
     margin-bottom: 5vh;
     font-size: 1.5vh; }
