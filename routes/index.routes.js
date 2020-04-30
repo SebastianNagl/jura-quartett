@@ -24,6 +24,11 @@ router.get("/terms", (req, res, next) => {
   res.render("terms", { loggedIn: req.user });
 });
 
+// rendering shopping cart
+router.get("/kaufen", (req, res, next) => {
+  res.render("kaufen");
+});
+
 //rendering cards Fälle page
 router.get("/faelle", (req, res, next) => {
   Card.find()

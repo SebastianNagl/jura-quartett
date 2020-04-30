@@ -1,8 +1,12 @@
-<h3 style="background-color: #{{color}}; color: white;">
-  {{#with card}}
-  § {{Kategorie}}{{Buchstabe}} – "{{Urteil}}"
-</h3>
-<p>{{Sachverhalt}}</p>
-{{/with}}
+<div class="card">
+  <h3 style="background-color: #{{color}}">
+    {{#with card}}
+    § {{Kategorie}}{{Buchstabe}} – "{{Urteil}}"
+  </h3>
+  <h4 class="header"> Zusammenfassung: </h4>
+  <p id="sachverhalt">{{Sachverhalt}}</p>
+  <h4 class="header">Volltext:</h4>
 
-<button><a href="/faelle">Zurück</a></button>
+  {{/with}}
+  <button><a href="/faelle">Zurück</a></button>
+</div>
