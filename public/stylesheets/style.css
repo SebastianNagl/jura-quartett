@@ -282,7 +282,8 @@ nav .konto a:hover {
     border-radius: 6px;
     width: 40px;
     height: 35px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    padding-left: 10px; }
   .container-table input[type="number"]:hover {
     transition: background-color 0.15s ease-in;
     background-color: rgba(0, 0, 0, 0.07); }
@@ -301,13 +302,24 @@ nav .konto a:hover {
     width: 330px; }
     .container-table td:nth-child(1) img {
       padding-right: 20px; }
+  .container-table td:nth-child(2) > label {
+    display: flex;
+    justify-content: center; }
+  .container-table td:nth-child(3) {
+    text-align: center; }
   .container-table a {
     background-color: #f04949;
     color: #faf8e6;
-    padding: 3px 12px;
+    padding: 10px 16px;
     border-radius: 6px;
     font-weight: 700;
-    box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1); }
+    box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    text-decoration: none; }
+  .container-table tr:nth-child(1) {
+    border-bottom: 1px solid #f04949; }
+  .container-table tr:nth-child(2) > td:nth-child(3) {
+    font-size: 1.5rem;
+    text-align: right; }
 
 * {
   margin: 0;
