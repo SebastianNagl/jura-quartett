@@ -196,7 +196,6 @@ nav .konto a:hover {
   border-bottom: none;
   padding-bottom: 20px; }
 
-
 .case-selector, .card {
   background-color: #faf8e6;
   padding: 8vh;
@@ -263,7 +262,7 @@ nav .konto a:hover {
       background-color: inherit;
       color: black;
       text-decoration: none; }
-=======
+
 .container-table {
   display: flex;
   justify-items: center;
@@ -309,7 +308,6 @@ nav .konto a:hover {
     border-radius: 6px;
     font-weight: 700;
     box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1); }
-
 
 * {
   margin: 0;

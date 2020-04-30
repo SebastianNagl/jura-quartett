@@ -24,18 +24,11 @@ router.get("/terms", (req, res, next) => {
   res.render("terms", { loggedIn: req.user });
 });
 
-<<<<<<< HEAD
 // rendering shopping cart
 router.get("/kaufen", (req, res, next) => {
   res.render("kaufen");
 });
 
-//rendering cards Urteilen page
-router.get("/urteilen", (req, res, next) => {
-  Cards.find().then((cards) => {
-    res.render("urteilen", { loggedIn: req.user, cards: cards });
-  });
-=======
 //rendering cards Fälle page
 router.get("/faelle", (req, res, next) => {
   Card.find()
@@ -103,7 +96,6 @@ router.get("/seed/:password", (req, res) => {
       .catch((err) => console.log(err))
       .finally(() => res.redirect("/"));
   }
->>>>>>> master
 });
 
 module.exports = router;
