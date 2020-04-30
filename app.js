@@ -16,7 +16,7 @@ const LocalStrategy = require("passport-local").Strategy;
 var GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 mongoose
-  .connect(process.env.DATABASE_URL || "mongodb://localhost/jura-quartett", {
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/jura-quartett", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -36,7 +36,7 @@ const app = express();
 // Middleware Setup
 app.use(logger("dev"));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // Session config
