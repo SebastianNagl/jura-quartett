@@ -3,8 +3,8 @@
     <thead>
       <tr></tr>
       <th>Das Jura Quartett</th>
-      <th>Preis</th>
       <th>Anzahl</th>
+      <th>Preis</th>
     </thead>
     <tbody>
       <tr>
@@ -17,24 +17,22 @@
             <p>32 erlesene Urteile</p>
           </div>
         </td>
-        <td>
-          30€
-        </td>
-        <td>
+        <td class="qty">
           <label>
-            <input type="number" value="1" min="0" />
+            <input onChange="calcTotal()" type="number" value="2" min="0" />
           </label>
         </td>
+        <td class="pu">€<span>30.00</span></td>
       </tr>
       <tr>
         <td></td>
         <td></td>
-        <td>Total 30€</td>
+        <td class="total"><span>Total 30€</span></td>
       </tr>
       <tr>
         <td></td>
-        <td></td>
-        <td><a href="#">Verfahren zum Auschecken</a></td>
+
+        <td colspan="2"><a href="#">Verfahren zum Auschecken</a></td>
       </tr>
     </tbody>
   </table>
