@@ -1,9 +1,11 @@
-<form action="/faelle" method="post">
-  <label for="cards">Wähle ein Urteil:</label>
-  <select id="cards" name="cardId">
-    {{#each cards}}
-    <option value="{{_id}}">{{Urteil}}</option>
-    {{/each}}
-  </select>
-  <button type="submit">Suchen</button>
-</form>
+<div class="case-selector">
+  <form action="/faelle" method="post">
+    <label for="cards">Wähle ein Urteil:</label><br>
+    <select id="cards" name="cardId">
+      {{#each cards}}
+      <option value="{{_id}}">{{Urteil}}</option>
+      {{/each}}
+    </select>
+    <button type="submit">Suchen</button>
+  </form>
+</div>
