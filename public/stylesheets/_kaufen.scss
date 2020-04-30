@@ -3,7 +3,7 @@
   justify-items: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 30px;
+  padding-top: 25px;
 
   table {
     background-color: $cream;
@@ -75,10 +75,11 @@
   }
 
   a:hover {
+    box-shadow: none;
   }
 
   tr:nth-child(1) {
-    border-bottom: 1px solid $red;
+    border-bottom: 2px solid $red;
   }
 
   tr:nth-child(2) > td:nth-child(3) {
@@ -87,5 +88,6 @@
   }
 
   td:nth-child(2) {
+    padding: 15px 10px 25px 0;
   }
 }

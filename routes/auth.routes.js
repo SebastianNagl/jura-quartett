@@ -87,7 +87,7 @@ router.get("/login", isLoggedIn(), (req, res, next) => {
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/auth/private-page",
+    successRedirect: "/",
     failureRedirect: "/auth/login",
     failureFlash: true,
     passReqToCallback: true,
@@ -110,7 +110,7 @@ router.get(
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "/auth/private-page",
+    successRedirect: "/",
     failureRedirect: "/auth/login",
   })
 );
