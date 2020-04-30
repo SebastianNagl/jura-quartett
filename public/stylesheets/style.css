@@ -173,7 +173,7 @@ nav .konto a:hover {
 
 .case-selector, .card {
   background-color: #faf8e6;
-  padding: 4vh;
+  padding: 8vh;
   display: flex;
   justify-content: center;
   line-height: 2.5vh;
@@ -189,11 +189,13 @@ nav .konto a:hover {
       font-size: inherit;
       text-align: center; }
     .case-selector form select, .card form select {
+      border: 2px solid #f04949;
       padding: 2vh;
       background-color: inherit;
       font-size: inherit;
       text-align-last: center; }
     .case-selector form button, .card form button {
+      border: 2px solid #f04949;
       margin-top: 2vh;
       background-color: inherit;
       font-size: inherit; }
@@ -224,6 +226,7 @@ nav .konto a:hover {
     background-color: inherit;
     font-size: 2vh; }
   .card button {
+    border: 2px solid;
     background-color: inherit;
     width: 15vh;
     height: 4vh;
