@@ -197,7 +197,7 @@ nav .konto a:hover {
   border-bottom: none;
   padding-bottom: 20px; }
 
-.case-selector, .card, .team {
+.case-selector, .card, .team, .regeln {
   background-color: #faf8e6;
   padding: 8vh;
   display: flex;
@@ -205,16 +205,16 @@ nav .konto a:hover {
   line-height: 2.5vh;
   margin: 5vh 20vh;
   border-radius: 6px; }
-  .case-selector form, .card form, .team form {
+  .case-selector form, .card form, .team form, .regeln form {
     font-size: 2.5vh;
     display: flex;
     flex-direction: column;
     background-color: inherit; }
-    .case-selector form label, .card form label, .team form label {
+    .case-selector form label, .card form label, .team form label, .regeln form label {
       background-color: inherit;
       font-size: inherit;
       text-align: center; }
-    .case-selector form select, .card form select, .team form select {
+    .case-selector form select, .card form select, .team form select, .regeln form select {
       border: 2px solid #f04949;
       padding: 2vh;
       height: 35px;
@@ -572,6 +572,9 @@ body > div {
     opacity: 0.6; }
   .landing .section3 {
     margin-top: 8vh; }
+  .landing a {
+    color: #f04949;
+    text-decoration: none; }
 
 .team {
   display: flex;
@@ -607,6 +610,20 @@ body > div {
     padding: 0 0.25em;
     background: #faf8e6; }
 
+.regeln {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+  .regeln h3 {
+    text-align: center;
+    margin-bottom: 10vh;
+    font-weight: bold; }
+  .regeln .game-mode {
+    width: 28%;
+    text-align: justify; }
+  .regeln li {
+    margin-bottom: 1.5vh; }
+
 * {
   margin: 0;
   padding: 0;
@@ -621,7 +638,7 @@ a {
   font-family: "Merriweather", serif; }
 
 footer {
-  margin-top: 20vh;
+  margin-top: 10vh;
   position: fixed;
   bottom: 0;
   background-color: #faf8e6;
