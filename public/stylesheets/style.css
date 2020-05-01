@@ -217,14 +217,25 @@ nav .konto a:hover {
     .case-selector form select, .card form select, .team form select, .regeln form select {
       border: 2px solid #f04949;
       padding: 2vh;
+      height: 35px;
       background-color: inherit;
       font-size: inherit;
       text-align-last: center; }
-    .case-selector form button, .card form button, .team form button, .regeln form button {
-      border: 2px solid #f04949;
+    .case-selector form button, .card form button, .team form button {
       margin-top: 2vh;
-      background-color: inherit;
-      font-size: inherit; }
+      background-color: #f04949;
+      color: #faf8e6;
+      border-radius: 6px;
+      font-weight: 700;
+      box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      width: 397px;
+      height: 35px;
+      margin: 0 auto;
+      margin-top: 3vh; }
+    .case-selector form button:hover, .card form button:hover, .team form button:hover {
+      box-shadow: none;
+      background-color: #f3857f; }
 
 .card {
   flex-direction: column;
@@ -251,19 +262,25 @@ nav .konto a:hover {
     padding: 5vh 0;
     background-color: inherit;
     font-size: 2vh; }
-  .card button {
-    border: 2px solid;
-    background-color: inherit;
+  .card a {
+    background-color: #f04949;
+    color: #faf8e6;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 700;
+    box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
     width: 15vh;
-    height: 4vh;
     margin-top: 4vh;
     margin-left: 10vh;
     margin-bottom: 5vh;
-    font-size: 1.5vh; }
-    .card button a {
-      background-color: inherit;
-      color: black;
-      text-decoration: none; }
+    text-align: center; }
+  .card a:hover {
+    box-shadow: none;
+    background-color: #f3857f; }
+
+body > div {
+  margin-bottom: 100px; }
 
 .container-table {
   display: flex;
@@ -318,7 +335,8 @@ nav .konto a:hover {
     box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
     text-decoration: none; }
   .container-table a:hover {
-    box-shadow: none; }
+    box-shadow: none;
+    background-color: #f3857f; }
   .container-table tr:nth-child(1) {
     border-bottom: 2px solid #f04949; }
   .container-table tr:nth-child(2) > td:nth-child(3) {
@@ -340,7 +358,7 @@ nav .konto a:hover {
     border-top: solid 2px white;
     border-bottom: solid 2px white;
     border-left: solid 2px white;
-    border-radius: 5% 0 0 5%;
+    border-radius: 12px;
     padding: 5px;
     width: 40%;
     height: 500px;
@@ -350,7 +368,7 @@ nav .konto a:hover {
     border-top: solid 2px white;
     border-bottom: solid 2px white;
     border-right: solid 2px white;
-    border-radius: 0 5% 5% 0;
+    border-radius: 12px;
     padding: 5px;
     width: 40%;
     height: 500px;
@@ -373,27 +391,27 @@ nav .konto a:hover {
     background-color: #faf8e6;
     color: #f04949;
     padding: 3px 12px;
-    border-radius: 6px;
+    border-radius: 12px;
     font-weight: 700;
     -webkit-box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.1);
     margin-top: 5vh;
     font-size: 4vh; }
   .landing .img {
-    border-radius: 6px;
+    border-radius: 12px;
     width: 500px;
     height: 450px;
     position: relative;
     bottom: 320px; }
   .landing .img1 {
-    border-radius: 6px;
+    border-radius: 12px;
     width: 200px;
     display: flex; }
   .landing .container6 {
     border-top: solid 2px white;
     border-bottom: solid 2px white;
     border-left: solid 2px white;
-    border-radius: 5% 0 0 5%;
+    border-radius: 12px;
     padding: 5px;
     width: 40%;
     height: 500px;
@@ -401,7 +419,7 @@ nav .konto a:hover {
     flex-direction: column;
     justify-content: space-around; }
   .landing .section4 div {
-    border-radius: 10%;
+    border-radius: 12px;
     width: 15%;
     height: 160px;
     padding: 10px;
@@ -434,7 +452,7 @@ nav .konto a:hover {
     margin-top: 8vh;
     padding-bottom: 50px; }
   .landing .box1 {
-    border-radius: 5%;
+    border-radius: 12px;
     width: 250px;
     height: 75px;
     padding: 10px;
@@ -443,7 +461,7 @@ nav .konto a:hover {
     left: 60px;
     bottom: 1px; }
   .landing .box2 {
-    border-radius: 5%;
+    border-radius: 12px;
     width: 230px;
     height: 230px;
     padding: 10px;
@@ -452,7 +470,7 @@ nav .konto a:hover {
     top: 170px;
     left: 290px; }
   .landing .box3 {
-    border-radius: 5%;
+    border-radius: 12px;
     width: 200px;
     height: 330px;
     padding: 10px;
@@ -461,7 +479,7 @@ nav .konto a:hover {
     left: 50px;
     top: 130px; }
   .landing .box4 {
-    border-radius: 5%;
+    border-radius: 12px;
     width: 100px;
     height: 310px;
     padding: 10px;
@@ -483,28 +501,28 @@ nav .konto a:hover {
     position: relative;
     width: 60%; }
   .landing .img2 {
-    border-radius: 6px;
+    border-radius: 12px;
     width: 250px;
     height: 370px;
     position: absolute;
     top: 50px;
     right: 300px; }
   .landing .img3 {
-    border-radius: 6px;
+    border-radius: 12px;
     width: 220px;
     height: 300px;
     position: absolute;
     top: 195px;
     right: 200px; }
   .landing .img4 {
-    border-radius: 6px;
+    border-radius: 12px;
     width: 160px;
     height: 240px;
     position: absolute;
     top: 120px;
     left: 540px; }
   .landing .image4 {
-    border-radius: 10%;
+    border-radius: 12px;
     width: 250px;
     height: 340px;
     padding: 10px;
@@ -513,7 +531,7 @@ nav .konto a:hover {
     top: 100px;
     right: 350px; }
   .landing .image5 {
-    border-radius: 10%;
+    border-radius: 12px;
     width: 190px;
     height: 300px;
     padding: 10px;
@@ -521,7 +539,7 @@ nav .konto a:hover {
     position: absolute;
     right: 230px; }
   .landing .image6 {
-    border-radius: 10%;
+    border-radius: 12px;
     width: 160px;
     height: 240px;
     padding: 10px;
